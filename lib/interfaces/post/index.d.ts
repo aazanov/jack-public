@@ -1,3 +1,4 @@
+import { Common } from "../common";
 export declare namespace Post {
     interface IPostPreview {
         id: string;
@@ -8,7 +9,7 @@ export declare namespace Post {
         preview: IPostPreviewData;
         permission: number;
         owner: IPostPreviewOwner;
-        duration: string;
+        duration: Common.IDuration;
         date: string;
     }
     interface IPostPreviewOwner {
@@ -26,7 +27,7 @@ export declare namespace Post {
         reward: number;
         test: string;
         type: string;
-        duration: string;
+        duration: Common.IDuration;
         owner: IPostDetailsOwner;
         preview: IPostPreviewData;
         details: IDetailsCommon[];
@@ -60,13 +61,9 @@ export declare namespace Post {
         type: "INTERVIEW";
         data: {
             content: string;
-            type: "RADIO" | "CHECKBOX" | "GENERAL";
-            variants: IQuestionVariant[];
+            type: Common.IQuestionType;
+            variants: Common.IQuestionVariant[];
         };
         answer?: string[];
-    }
-    interface IQuestionVariant {
-        id: string;
-        content: string;
     }
 }
