@@ -29,34 +29,34 @@ export declare namespace Post {
         duration: string;
         owner: IPostDetailsOwner;
         preview: IPostPreviewData;
-        details: (IDetailsHTML | IDetailsImage | IDetailsLine | IDetailsInterview)[];
+        details: IDetailsCommon[];
     }
     interface IPostDetailsOwner {
         name: string;
         about: string;
         logo: string;
     }
-    interface IDetailsHTML {
+    interface IDetailsCommon {
         id: string;
+        type: string;
+    }
+    interface IDetailsHTML extends IDetailsCommon {
         type: "HTML";
         data: {
             content: string;
         };
     }
-    interface IDetailsImage {
-        id: string;
+    interface IDetailsImage extends IDetailsCommon {
         type: "IMAGE";
         data: {
             url: string;
             caption?: string;
         };
     }
-    interface IDetailsLine {
-        id: string;
+    interface IDetailsLine extends IDetailsCommon {
         type: "LINE";
     }
-    interface IDetailsInterview {
-        id: string;
+    interface IDetailsInterview extends IDetailsCommon {
         type: "INTERVIEW";
         data: {
             content: string;

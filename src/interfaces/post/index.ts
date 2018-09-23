@@ -32,9 +32,9 @@ export declare namespace Post {
         test: string;
         type: string;
         duration: string;
-        owner: IPostDetailsOwner,
-        preview: IPostPreviewData,
-        details: (IDetailsHTML | IDetailsImage | IDetailsLine | IDetailsInterview)[]
+        owner: IPostDetailsOwner;
+        preview: IPostPreviewData;
+        details: IDetailsCommon[];
     }
 
     export interface IPostDetailsOwner {
@@ -43,16 +43,19 @@ export declare namespace Post {
         logo: string;
     }
 
-    export interface IDetailsHTML {
+    export interface IDetailsCommon {
         id: string;
+        type: string;
+    }
+
+    export interface IDetailsHTML extends IDetailsCommon {
         type: "HTML";
         data: {
             content: string
         }
     }
 
-    export interface IDetailsImage {
-        id: string;
+    export interface IDetailsImage extends IDetailsCommon {
         type: "IMAGE";
         data: {
             url: string;
@@ -60,13 +63,11 @@ export declare namespace Post {
         }
     }
 
-    export interface IDetailsLine {
-        id: string;
+    export interface IDetailsLine extends IDetailsCommon{
         type: "LINE";
     }
 
-    export interface  IDetailsInterview {
-        id: string;
+    export interface  IDetailsInterview extends IDetailsCommon {
         type: "INTERVIEW";
         data: {
             content: string;
