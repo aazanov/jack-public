@@ -1,3 +1,1 @@
-import {IPostPreview} from "./interfaces/interfaces";
-
-export {IPostPreview};
+export {Post} from "./interfaces/post";
