@@ -1,4 +1,4 @@
-import {Common} from "../common";
+import {Common} from "../common/index";
 
 export declare namespace Post {
     export interface IPostPreview {
@@ -12,6 +12,7 @@ export declare namespace Post {
         owner: IPostPreviewOwner;
         duration: Common.IDuration;
         date: string;
+        amount: number;
     }
 
     export interface IPostPreviewOwner {
@@ -37,6 +38,7 @@ export declare namespace Post {
         owner: IPostDetailsOwner;
         preview: IPostPreviewData;
         details: IDetailsCommon[];
+        amount: number;
     }
 
     export interface IPostDetailsOwner {
