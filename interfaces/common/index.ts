@@ -1,5 +1,7 @@
 export declare namespace Common {
 
+    export type IMethod = "POST" | "PUT" | "GET" | "DELETE";
+
     export interface IQuestionVariant {
         id: string;
         content: string;
