@@ -9,6 +9,8 @@ export declare namespace Test {
         questions: ITestQuestion[]
     }
 
+    // test comment
+
     export interface ITestQuestion {
         id: string;
         content: string;
