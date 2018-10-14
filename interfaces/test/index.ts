@@ -17,4 +17,8 @@ export declare namespace Test {
         type: Common.IQuestionType;
         variants: Common.IQuestionVariant[];
     }
+    
+    export interface ITestAnswer {
+
+    }
 }
