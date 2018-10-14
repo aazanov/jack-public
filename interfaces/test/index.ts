@@ -22,16 +22,32 @@ export declare namespace Test {
         answer: string[];
         question: string;
     }
+
+    export interface ICheckedAnswer {
+        question: string;
+        answer: string[];
+        correct?: string[];
+        reward?: number;
+    }
+
+    export interface ICheckedTest {
+        questions: ICheckedAnswer[];
+        totalReward: number;
+    }
     
     export interface ITestCheck {
+        _id: string;
         questions: ITestCorrectAnswer[];
         reward: number;
+        postId: string;
+        completed: boolean;
     }
 
     interface ITestCorrectAnswer {
+        _id: string;
         correct: string[];
         question: string;
-        rewardWeight?: number;
+        weight?: number;
     }
 
 }
