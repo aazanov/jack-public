@@ -71,7 +71,7 @@ export declare namespace Post {
         type: "LINE";
     }
 
-    export interface  IDetailsInterview extends IDetailsCommon {
+    export interface IDetailsInterview extends IDetailsCommon {
         type: "INTERVIEW";
         data: {
             content: string;
