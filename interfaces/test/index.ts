@@ -6,7 +6,7 @@ export declare namespace Test {
             reward: number;
             duration: Common.IDuration;
         };
-        questions: ITestQuestion[]
+        questions: ITestQuestion[];
     }
 
     // test comment
@@ -19,6 +19,19 @@ export declare namespace Test {
     }
     
     export interface ITestAnswer {
-
+        answer: string[];
+        question: string;
     }
+    
+    export interface ITestCheck {
+        questions: ITestCorrectAnswer[];
+        reward: number;
+    }
+
+    interface ITestCorrectAnswer {
+        correct: string[];
+        question: string;
+        rewardWeight?: number;
+    }
+
 }

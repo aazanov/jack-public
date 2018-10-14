@@ -8,5 +8,6 @@
     "tsc": "tsc"
   },
   "author": "aazanov",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
