@@ -12,7 +12,7 @@ export declare namespace Post {
         owner: IPostPreviewOwner;
         duration: Common.IDuration;
         date: string;
-        amount: number;
+        testIsActive: boolean;
     }
 
     export interface IPostPreviewOwner {
@@ -38,7 +38,7 @@ export declare namespace Post {
         owner: IPostDetailsOwner;
         preview: IPostPreviewData;
         details: IDetailsCommon[];
-        amount: number;
+        testIsActive: boolean;
     }
 
     export interface IPostDetailsOwner {
